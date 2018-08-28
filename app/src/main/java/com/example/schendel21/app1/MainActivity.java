@@ -15,6 +15,12 @@ public class MainActivity extends AppCompatActivity {
     }
 
     public void toggleText(View v){
-        textView.setText("You clicked the button!");
+        if(textView.getVisibility()==View.INVISIBLE) {
+            textView.setTextSize(60);
+            textView.setText("Hello, my name is Alex!");
+            textView.setVisibility(View.VISIBLE);
+        }
+        else
+            textView.setVisibility(View.INVISIBLE);
     }
 }
